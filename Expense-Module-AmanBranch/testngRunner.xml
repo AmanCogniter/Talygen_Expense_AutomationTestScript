@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<test name="Expense Report">
+		<classes>
+			<class name="testcases.ProjectListingTest" />
+			<class name="testcases.ManageExpenseTest">
+
+				<methods>
+					<include name="addExpenseWithSubmitForApproval" />
+				</methods>
+			</class>
+			<class name="testcases.ExpenseReportTest" />
+		</classes>
+	</test>
+
+	<test name="ExpenseOverLimit ">
+		<classes>
+			<class name="testcases.ExpenseApprovalTest">
+				<methods>
+					<include name="verifyExpenseApproveFunctionality" />
+				</methods>
+			</class>
+			<class name="testcases.ExpenseOverLimitTest">
+			</class>
+		</classes>
+
+	</test>
+	<test name="Expense Reimbursements">
+		<classes>
+			<class name="testcases.ReimbursementsTest">
+				<methods>
+					<include name="verifyReimbursementReportWithCompany" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>
