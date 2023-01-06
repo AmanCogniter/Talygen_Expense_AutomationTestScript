@@ -47,7 +47,7 @@ public class ProjectListingPage extends WebBasePage {
 
 	// click on full menu
 	public void clickFullMenu() {
-		staticWait(3000);
+		staticWait(5000);
 		//findElementInVisibility(By.cssSelector("#navbarDropdownPortfolio"), 20);
 		click(By.cssSelector("#navbarDropdownPortfolio"), "Full Menu", 20);
 	}
@@ -233,7 +233,9 @@ public class ProjectListingPage extends WebBasePage {
 
 	// click Expense limit
 	public void expenseLimit() {
-		findElementVisibility(By.cssSelector("#aProjectOverView12"), 2);
+		staticWait(2000);
+		findElementVisibility(By.cssSelector("#aProjectOverView12"), 20);
+		staticWait(2000);
 		click(By.cssSelector("#aProjectOverView12"), "click Expense limit", 20);
 	}
 

@@ -222,7 +222,7 @@ public class BulkUploadPage extends WebBasePage {
 		staticWait(3000);
 		try {
 			// Path of the excel file
-			FileInputStream fis = new FileInputStream("C:\\Users\\aanand\\Downloads\\Expense.xls");
+			FileInputStream fis = new FileInputStream("C:\\Users\\aanand\\eclipse-workspace\\Expense-Module-AmanBranch\\Expense-Module-AmanBranch\\src\\main\\resources\\testfiles\\Expense.xls");/*C:\\Users\\aanand\\Downloads\\Expense.xls*/
 			// Creating a workbook
 			HSSFWorkbook workbook = new HSSFWorkbook(fis);
 			HSSFSheet sheet = workbook.getSheetAt(0);

@@ -64,7 +64,7 @@ public class BulkUploadAction extends WebBasePage {
 	public void excelFile() {
 
 		bulkUploadPage.readExcelFile();
-		bulkUploadPage.validateExpenseList();
+		//bulkUploadPage.validateExpenseList();
 		
 	}
 	

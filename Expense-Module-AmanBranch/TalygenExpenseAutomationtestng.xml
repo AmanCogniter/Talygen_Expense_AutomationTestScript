@@ -4,14 +4,17 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="testcases.AddExpenseLimitTest"/>
-      <class name="testcases.ManageExpenseTest"/>
-      <class name="testcases.ExpenseApprovalTest"/>
-      <class name="testcases.ExpenseReportTest"/>
-      <class name="testcases.ExpenseListingTest"/>
-      <class name="testcases.ReimbursementsTest"/>
-      <class name="testcases.ProjectListingTest"/>
-      <class name="testcases.ExpenseOverLimitTest"/>
       <class name="testcases.BulkUploadTest"/>
+      <class name="testcases.ExpenseApprovalTest"/>
+       <class name="testcases.ExpenseListingTest"/>
+        <class name="testcases.ExpenseOverLimitTest"/>
+          <class name="testcases.ExpenseReportTest"/>
+      <class name="testcases.ManageExpenseTest"/>
+       <class name="testcases.ProjectListingTest"/>
+    <class name="testcases.ReimbursementsTest"/>
+     
+     
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

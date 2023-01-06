@@ -3,24 +3,15 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testcases.ReimbursementsTest">
+      <class name="testcases.ExpenseReportTest">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="close"/>
-          <include name="reportWrapUp"/>
-          <include name="setUp"/>
-          <include name="verifyReimbursementReportWithCompany"/>
-        </methods>
-      </class> <!-- testcases.ReimbursementsTest -->
-      <class name="testcases.BulkUploadTest">
-        <methods>
-          <include name="verifyExpenseFileUpload"/>
+          <include name="verifyExpenseReport"/>
           <include name="beforeMethod"/>
           <include name="close"/>
           <include name="reportWrapUp"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- testcases.BulkUploadTest -->
+      </class> <!-- testcases.ExpenseReportTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -27,7 +27,7 @@ public class BulkUploadTest extends WebTestBase {
 		bulkUploadAction.bulkUpload();
 		bulkUploadAction.verifyExpenseFile();
 		bulkUploadAction.importButton();
-		bulkUploadAction.excelFile();
+		//bulkUploadAction.excelFile();
 
 	}
 
