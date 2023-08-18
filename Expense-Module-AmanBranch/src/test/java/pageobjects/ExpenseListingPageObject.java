@@ -166,7 +166,7 @@ public class ExpenseListingPageObject extends WebBasePage {
 	// Button visibilty
 	public void checkButtonsVisibility() {
 		toCheckElementIsDisplayed(By.xpath("//a/span[text()=' Add Expense']"), 20, "Add expense");
-		toCheckElementIsDisplayed(By.xpath("//a/span[text()=' Send for Approval']"), 20, "Send for approval");
+		toCheckElementIsDisplayed(By.xpath("//a/span[contains(text(),' Send For Approval')]"), 20, "Send for approval");
 		toCheckElementIsDisplayed(By.xpath("//a/span[contains(text(),'Remove')]"), 20, "Remove");
 	}
 
@@ -185,7 +185,7 @@ public class ExpenseListingPageObject extends WebBasePage {
 //		clickByJavascript(By.xpath("//tbody//tr[1]//span[@class='actions mobileaction']"), "Action button.", 10);
 
 		findElementVisibility(By.xpath("//table[@id='tablelistingdata']/tbody/tr/td/span[@class='actions mobileaction']"), 20);
-		clickByJavascript(By.xpath("//table[@id='tablelistingdata']/tbody/tr/td/span[@class='actions mobileaction']"), "Action button.", 10);
+		click(By.xpath("//table[@id='tablelistingdata']/tbody/tr/td/span[@class='actions mobileaction']"), "Action button.", 10);
 
 	}
 
@@ -202,7 +202,7 @@ public class ExpenseListingPageObject extends WebBasePage {
 
 	// click Ok button
 	public void okButton() {
-		clickByJavascript(By.xpath("//button[@class='btn btn-success formbtn widthhalf']"), "click Ok button", 10);
+		click(By.xpath("//button[@class='btn btn-success formbtn widthhalf']"), "click Ok button", 10);
 	}
 
 	// view attachement tab
@@ -244,7 +244,7 @@ public class ExpenseListingPageObject extends WebBasePage {
 
 //		clickByJavascript(By.cssSelector("#chkAll_0"), "select all", 10);
 
-		clickByJavascript(By.xpath("//tbody//tr[1]//td//a[@data-original-title='Send for Approval']"),
+		clickByJavascript(By.xpath("//tbody//tr[1]//td//a[@data-original-title='Send For Approval']"),
 				"Send For approval", 10);
 
 //		clickByJavascript(By.cssSelector("#aCommanApproval"), "Send For approval", 10);
@@ -253,6 +253,8 @@ public class ExpenseListingPageObject extends WebBasePage {
 	// edit expense
 	public void editExpense() {
 		clickByJavascript(By.xpath("//tbody//tr[1]//td//a[@data-original-title='Edit Expense'][1]"), "Edit expense",
+				10);
+		clickByJavascript(By.xpath("//a/span[text()='Save and Send for Approval']"), "Save and Send for Approval",
 				10);
 	}
 
@@ -263,9 +265,10 @@ public class ExpenseListingPageObject extends WebBasePage {
 
 	// verify expense searched
 	public void verifyExpenseSearch() {
+		staticWait(2000);
 		String catogeryName = AddExpenseLimitPage.categoryNameWithDate;
-		verifyActualExpectedValues(By.xpath("//table[@id='tablelistingdata']//td[3]"), catogeryName,
-				"Catogery name" + catogeryName, 20);
+		verifyActualExpectedValues(By.xpath("//table[@id='tablelistingdata']//td[3]/span"), catogeryName,
+				"Catogery name" +" "+ catogeryName, 20);
 	}
 
 }

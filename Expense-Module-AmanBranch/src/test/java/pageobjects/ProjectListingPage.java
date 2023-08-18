@@ -96,6 +96,11 @@ public class ProjectListingPage extends WebBasePage {
 		projectName = prop.getProperty("enterProjectName") + datevalue;
 		enter(By.xpath("//input[@name='project_name']"), projectName, "enterProject Name", 20);
 	}
+	// enter project name
+		public void enterProjectNameForEditExpense() {
+			projectName = prop.getProperty("enterProjectNameForExpense") + datevalue;
+			enter(By.xpath("//input[@name='project_name']"), projectName, "enterProject Name", 20);
+		}
 
 	// click on add channel
 	public void addChannel() {
@@ -106,12 +111,19 @@ public class ProjectListingPage extends WebBasePage {
 
 	// enter Channel name
 	public void enterChannelName() {
-		 Random random=new Random();
+		
 
-	 randomNumber = random.nextInt(10000);
-		enter(By.cssSelector("#ChannelName"), prop.getProperty("enterChannelName") + randomNumber, "Enter Channel name",
+	
+		enter(By.cssSelector("#ChannelName"), prop.getProperty("enterChannelName") + datevalue, "Enter Channel name",
 				20);
 	}
+	// enter Channel name
+		public void enterChannelNameForEditExpense() {
+			
+		
+			enter(By.cssSelector("#ChannelName"), prop.getProperty("enterChannelNameForExpense") + datevalue, "Enter Channel name",
+					20);
+		}
 
 	// enter Channel name
 	public void enterChannelDescription() {
@@ -199,6 +211,7 @@ public class ProjectListingPage extends WebBasePage {
 
 	// click Checkbox
 	public void selectCheckbox() {
+		staticWait(3000);
 		clickByJavascript(By.xpath(
 				"//div[@class='table-responsive table-fix-header float-left']//tbody//tr[1]//td[1]//input//following::label[1]"),
 				"Select checkbox", 20);

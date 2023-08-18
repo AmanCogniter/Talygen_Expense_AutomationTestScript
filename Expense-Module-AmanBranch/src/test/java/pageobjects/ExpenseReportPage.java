@@ -201,7 +201,7 @@ public class ExpenseReportPage extends WebBasePage {
 	public void getTotalRecordCount() {
 		try {
 			//WebElement element = findElementPresence(By.xpath("//tr[@valign='top'][2]/td[8]/div"), 20);
-			WebElement element = findElementPresence(By.xpath("//div[@id='viewer_table1']"), 20);
+			WebElement element = findElementPresence(By.xpath("//div[@id='viewer_pageviewContainer']"), 20);
 			JavascriptExecutor jse = (JavascriptExecutor) driver;
 			// jse.executeScript("arguments[0].scrollIntoView();", element);
 			jse.executeScript("window.scrollBy(0,document.body.scrollHeight)");

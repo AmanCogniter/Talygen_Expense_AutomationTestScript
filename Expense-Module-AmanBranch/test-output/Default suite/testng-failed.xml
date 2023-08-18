@@ -3,15 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.BulkUploadTest">
+      <class name="testcases.ReimbursementsTest">
         <methods>
-          <include name="verifyExpenseFileUpload"/>
           <include name="beforeMethod"/>
+          <include name="verifyReimbursementReportWithClient"/>
           <include name="close"/>
           <include name="reportWrapUp"/>
           <include name="setUp"/>
+          <include name="verifyReimbursementReportWithCompany"/>
         </methods>
-      </class> <!-- testcases.BulkUploadTest -->
+      </class> <!-- testcases.ReimbursementsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

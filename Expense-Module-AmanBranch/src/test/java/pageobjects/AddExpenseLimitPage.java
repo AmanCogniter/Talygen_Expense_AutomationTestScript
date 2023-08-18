@@ -64,7 +64,17 @@ public class AddExpenseLimitPage extends WebBasePage {
 		 randomNumber = random.nextInt(1000);
 
 		//categoryNameWithDate = prop.getProperty("enterCategoryName") + datevalue;
-		categoryNameWithDate = prop.getProperty("enterCategoryName") + randomNumber;
+		categoryNameWithDate = prop.getProperty("enterCategoryName") + datevalue;
+		enter(By.cssSelector("#CategoryName"), categoryNameWithDate, "Enter category Name", 20);
+	}
+	/* enter Category Name */
+	public void enterCategoryNameForEditExpense() {
+		 Random random=new Random();
+
+		 randomNumber = random.nextInt(1000);
+
+		//categoryNameWithDate = prop.getProperty("enterCategoryName") + datevalue;
+		categoryNameWithDate = prop.getProperty("enterCategoryNameForExpense") + datevalue;
 		enter(By.cssSelector("#CategoryName"), categoryNameWithDate, "Enter category Name", 20);
 	}
 

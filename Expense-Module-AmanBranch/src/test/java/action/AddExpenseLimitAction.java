@@ -31,6 +31,16 @@ public class AddExpenseLimitAction extends WebBasePage {
 		addExpenseLimitPage.saveCategory();
 
 	}
+	// navigate To add Expense category
+		public void addExpenseCategoryForEditExpense() {
+
+			addExpenseLimitPage.addExpenseCategory();
+			addExpenseLimitPage.enterCategoryNameForEditExpense();
+			addExpenseLimitPage.selectCatogeryType();
+			addExpenseLimitPage.enterCategoryDescription();
+			addExpenseLimitPage.saveCategory();
+
+		}
 
 	public void addExpenseLimit() {
 //		addExpenseLimitPage.addExpenseCategory();

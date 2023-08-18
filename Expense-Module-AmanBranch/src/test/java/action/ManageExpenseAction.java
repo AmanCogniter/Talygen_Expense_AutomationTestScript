@@ -44,6 +44,24 @@ public class ManageExpenseAction extends WebBasePage {
 		
 
 	}
+	// expense details
+		public void fillExpenseDetailsForEditExpense() {
+
+			manageExpensePage.enterExpenseTitleForEditExpense();
+			manageExpensePage.enterExpenseDate();
+			manageExpensePage.selectProject();
+			manageExpensePage.addTripName();
+			manageExpensePage.selectTrip();
+			manageExpensePage.selectCategory();
+			//manageExpensePage.testCategory();
+			
+			manageExpensePage.enterExpenseAmount();
+			manageExpensePage.selectCurrency();
+			manageExpensePage.expenseFileUpload();
+			manageExpensePage.enterExpenseDescription();
+			
+
+		}
 
 	// submit for approval
 	public void submitForApproval() {

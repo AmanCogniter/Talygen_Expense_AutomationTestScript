@@ -1,6 +1,5 @@
 package testcases;
 
-
 import static reporting.ComplexReportFactory.getTest;
 
 import org.testng.annotations.Test;
@@ -16,17 +15,17 @@ import utils.WebTestBase;
 
 public class ExpenseListingTest extends WebTestBase {
 
-	//@Test(priority = 0)
+	@Test(priority = 0)
 	public void verifyFileAndButtonsFunctionality() {
 		test = getTest("TC_Expense_Listing");
 		ProjectListingAction projectListingAction = new ProjectListingAction(driver);
-		
+
 		new LoginAction(driver).logoutLogin();
 		ExpenseListingAction expenseListingAction = new ExpenseListingAction(driver);
 		expenseListingAction.navigateToExpenses();
-		//expenseListingAction.performSearch();
-		//expenseListingAction.verifyExpenseSearch();
-		//expenseListingAction.verifyPendingStatus();
+		// expenseListingAction.performSearch();
+		// expenseListingAction.verifyExpenseSearch();
+		// expenseListingAction.verifyPendingStatus();
 		expenseListingAction.clickAllCheckbox();
 		expenseListingAction.checkButtonsVisibility();
 		expenseListingAction.clickActionButton();
@@ -34,7 +33,7 @@ public class ExpenseListingTest extends WebTestBase {
 		expenseListingAction.verifyDownloadFile();
 	}
 
-	//@Test(priority = 1)
+	@Test(priority = 1)
 	public void verifySendForApprovalFunctionality() {
 		test = getTest("TC_Expense_Listing");
 		new LoginAction(driver).logoutLogin();
@@ -44,27 +43,31 @@ public class ExpenseListingTest extends WebTestBase {
 		/*
 		 * this code will create a project
 		 */
-		projectListingAction.navigateToProject();
-		projectListingAction.addProject();
-		projectListingAction.addChannel();
-		projectListingAction.selectPriority();
-		projectListingAction.enterPurchaseNumber();
-		projectListingAction.selectLocation();
-		projectListingAction.enterProjectDescription();
-		projectListingAction.clickNextButton();
+		
+		  projectListingAction.navigateToProject(); 
+		  projectListingAction.addProject();
+		  projectListingAction.addChannel(); 
+		  projectListingAction.selectPriority();
+		  projectListingAction.enterPurchaseNumber();
+		  projectListingAction.selectLocation();
+		  projectListingAction.enterProjectDescription();
+		  projectListingAction.clickNextButton();
+		 
 		/*
 		 * This code will add expense and Save as draft
 		 */
-		AddExpenseLimitAction addExpenseLimitAction = new AddExpenseLimitAction(driver); 
-		  addExpenseLimitAction.addExpLimit();
+		
+		  AddExpenseLimitAction addExpenseLimitAction = new
+		  AddExpenseLimitAction(driver); addExpenseLimitAction.addExpLimit();
 		  addExpenseLimitAction.addExpenseCategory();
-		  addExpenseLimitAction.addExpenseLimit();
-		manageExpenseAction.addExpense();
-		manageExpenseAction.fillExpenseDetails();
-		manageExpenseAction.saveAsDraft();
+		  addExpenseLimitAction.addExpenseLimit(); manageExpenseAction.addExpense();
+		  manageExpenseAction.fillExpenseDetails(); manageExpenseAction.saveAsDraft();
+		 
 		new LoginAction(driver).logoutLogin();
 		ExpenseListingAction expenseListingAction = new ExpenseListingAction(driver);
 		expenseListingAction.navigateToExpenses();
+		expenseListingAction.performSearchForSendForApproval();
+
 		expenseListingAction.verifyDraftStatus();
 		expenseListingAction.verifySendForApproval();
 	}
@@ -79,26 +82,29 @@ public class ExpenseListingTest extends WebTestBase {
 		/*
 		 * this code will create a project
 		 */
-		projectListingAction.navigateToProject();
-		projectListingAction.addProject();
-		projectListingAction.addChannel();
-		projectListingAction.selectPriority();
-		projectListingAction.enterPurchaseNumber();
-		projectListingAction.selectLocation();
-		projectListingAction.enterProjectDescription();
-		projectListingAction.clickNextButton();
-		/*
-		 * This code will add expense and Save as draft
-		 */
-		AddExpenseLimitAction addExpenseLimitAction = new AddExpenseLimitAction(driver); 
-		  addExpenseLimitAction.addExpLimit();
-		  addExpenseLimitAction.addExpenseCategory();
-		  addExpenseLimitAction.addExpenseLimit();
-		manageExpenseAction.addExpense();
-		manageExpenseAction.fillExpenseDetails();
-		manageExpenseAction.saveAsDraft();
-//		new LoginAction(driver).logoutLogin();
+		   projectListingAction.navigateToProject();
+		
+		  projectListingAction.addProjectForEditExpense(); 
+		  projectListingAction.addChannelForEditExpense();
+		  projectListingAction.selectPriority();
+		  projectListingAction.enterPurchaseNumber();
+		  projectListingAction.selectLocation();
+		  projectListingAction.enterProjectDescription();
+		  projectListingAction.clickNextButton();
+		  
+			/* This code will add expense and Save as draft */
+		  
+		  AddExpenseLimitAction addExpenseLimitAction = new
+		  AddExpenseLimitAction(driver); addExpenseLimitAction.addExpLimit();
+		  addExpenseLimitAction.addExpenseCategoryForEditExpense();
+		  addExpenseLimitAction.addExpenseLimit(); 
+		  manageExpenseAction.addExpense();
+		  manageExpenseAction.fillExpenseDetailsForEditExpense(); 
+		  manageExpenseAction.saveAsDraft();
+		 
+		//new LoginAction(driver).logoutLogin();
 		ExpenseListingAction expenseListingAction = new ExpenseListingAction(driver);
+		
 		expenseListingAction.verifyDraftStatus();
 		expenseListingAction.editExpense();
 	}

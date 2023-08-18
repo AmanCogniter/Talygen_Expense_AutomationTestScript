@@ -121,7 +121,7 @@ public class BulkUploadPage extends WebBasePage {
 	// Import button
 	public void clickImport() {
 		staticWait(3000);
-		clickByJavascript(By.xpath("//input[@class='btn btn-info formbtn widthhalf fa fa-input']"), "Import button",
+		clickByJavascript(By.xpath("//a[@data-original-title='Import from excel file']"), "Import button",
 				10);
 	}
 

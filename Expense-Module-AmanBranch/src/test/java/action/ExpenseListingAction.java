@@ -36,6 +36,13 @@ public class ExpenseListingAction extends WebBasePage {
 		expenseListingPage.clickDateTo();
 		expenseListingPage.clickSearch();
 	}
+	// perform search for Send For Approval
+		public void performSearchForSendForApproval() {
+			expenseListingPage.clickExpandAll();
+			expenseListingPage.clickProject();
+			
+			expenseListingPage.clickSearch();
+		}
 
 	public void verifyDraftStatus() {
 		expenseListingPage.getTextOfDraftStatus();
@@ -60,7 +67,7 @@ public class ExpenseListingAction extends WebBasePage {
 	}
 
 	public void clickActionButton() {
-
+		staticWait(3000);
 		expenseListingPage.clickActionButton();
 	}
 
@@ -78,10 +85,12 @@ public class ExpenseListingAction extends WebBasePage {
 		clickActionButton();
 		expenseListingPage.clickSendForApproval();
 		expenseListingPage.okButton();
+		performSearchForSendForApproval();
 		verifyPendingStatus();
 	}
 
 	public void editExpense() {
+		performSearchForSendForApproval();
 		clickActionButton();
 		expenseListingPage.editExpense();
 	}

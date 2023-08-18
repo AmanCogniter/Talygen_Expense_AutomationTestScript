@@ -12,6 +12,83 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- testcases.ExpenseReportTest -->
+      <class name="testcases.ProjectListingTest">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="addProjectWithDefaultTemplate"/>
+          <include name="close"/>
+          <include name="reportWrapUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testcases.ProjectListingTest -->
+      <class name="testcases.AddExpenseLimitTest">
+        <methods>
+          <include name="addExpenseLimit"/>
+          <include name="beforeMethod"/>
+          <include name="close"/>
+          <include name="reportWrapUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testcases.AddExpenseLimitTest -->
+      <class name="testcases.ManageExpenseTest">
+        <methods>
+          <include name="addExpenseWithSaveAsDraft"/>
+          <include name="beforeMethod"/>
+          <include name="close"/>
+          <include name="reportWrapUp"/>
+          <include name="setUp"/>
+          <include name="addExpenseWithSubmitForApproval"/>
+        </methods>
+      </class> <!-- testcases.ManageExpenseTest -->
+      <class name="testcases.ReimbursementsTest">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="verifyReimbursementReportWithClient"/>
+          <include name="close"/>
+          <include name="reportWrapUp"/>
+          <include name="setUp"/>
+          <include name="verifyReimbursementReportWithCompany"/>
+        </methods>
+      </class> <!-- testcases.ReimbursementsTest -->
+      <class name="testcases.ExpenseApprovalTest">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="verifyExpenseRejectFunctionality"/>
+          <include name="close"/>
+          <include name="reportWrapUp"/>
+          <include name="verifyExpenseApproveFunctionality"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testcases.ExpenseApprovalTest -->
+      <class name="testcases.ExpenseOverLimitTest">
+        <methods>
+          <include name="verifyOverLimitReport"/>
+          <include name="beforeMethod"/>
+          <include name="close"/>
+          <include name="reportWrapUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testcases.ExpenseOverLimitTest -->
+      <class name="testcases.BulkUploadTest">
+        <methods>
+          <include name="verifyExpenseFileUpload"/>
+          <include name="verifyBulkUploadValidation"/>
+          <include name="beforeMethod"/>
+          <include name="close"/>
+          <include name="reportWrapUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testcases.BulkUploadTest -->
+      <class name="testcases.ExpenseListingTest">
+        <methods>
+          <include name="verifyEditExpenseFunctionality"/>
+          <include name="beforeMethod"/>
+          <include name="close"/>
+          <include name="reportWrapUp"/>
+          <include name="setUp"/>
+          <include name="verifySearchFunctionality"/>
+        </methods>
+      </class> <!-- testcases.ExpenseListingTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

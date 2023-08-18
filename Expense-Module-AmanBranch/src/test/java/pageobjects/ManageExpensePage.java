@@ -90,12 +90,20 @@ public class ManageExpensePage extends WebBasePage {
        }
 	// enter expense title
 	public void enterExpenseTitle() {
-	enter(By.cssSelector("#ExpenseTitle"), prop.getProperty("enterExpenseTitle") + randomNameGenerator,"enter expense title", 20);
+	enter(By.cssSelector("#ExpenseTitle"), prop.getProperty("enterExpenseTitle") + otherDateValue,"enter expense title", 20);
 		
 		//enter(By.cssSelector("#ExpenseTitle"),"AutomationExpenseAJBDBJAKGC","enter expense title", 20);
 		
 		
 	}
+	// enter expense title
+		public void enterExpenseTitleForEditExpense() {
+		enter(By.cssSelector("#ExpenseTitle"), prop.getProperty("enterExpenseTitleForExpense") + otherDateValue,"enter expense title", 20);
+			
+			//enter(By.cssSelector("#ExpenseTitle"),"AutomationExpenseAJBDBJAKGC","enter expense title", 20);
+			
+			
+		}
  
 	// enter expense date
 	public void enterExpenseDate() {

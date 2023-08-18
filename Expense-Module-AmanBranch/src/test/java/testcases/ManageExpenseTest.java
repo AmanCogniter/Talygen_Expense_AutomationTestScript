@@ -136,6 +136,10 @@ public class ManageExpenseTest extends WebTestBase {
 		manageExpenseAction.saveAsDraft();
 		//manageExpenseAction.submitForApproval();
 		//manageExpenseAction.expenseSuccessMessage();
+		 ExpenseListingAction expenseListingAction = new ExpenseListingAction(driver);
+		expenseListingAction.performSearchForSendForApproval();
+
+		expenseListingAction.verifyDraftStatus();
 	}
 	
 	/*
@@ -165,7 +169,9 @@ public class ManageExpenseTest extends WebTestBase {
 		 */
 //		expenseListingAction.removeExpense();
 //		manageExpenseAction.expenseSuccessMessage();
-//		expenseListingAction.performSeaarch();
+		 ExpenseListingAction expenseListingAction = new ExpenseListingAction(driver);
+		expenseListingAction.performSearchForSendForApproval();
+		expenseListingAction.verifyPendingStatus();
 	}
 
 }

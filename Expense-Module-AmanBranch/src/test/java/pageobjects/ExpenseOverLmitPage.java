@@ -154,7 +154,7 @@ public class ExpenseOverLmitPage extends WebBasePage {
 			logger.info("Switch to reports frame");
 			staticWait(4000);
 			//recordCount = gettextByJSexecuter(By.xpath("//tr[@valign='top'][2]/td[8]/div"), "Total Records count", 20);
-			recordCount = gettextByJSexecuter(By.xpath("//div[@id='viewer_pageviewOuterContainer']"), "Total Records count", 20);
+			recordCount = gettextByJSexecuter(By.xpath("//div[@id='viewer_pageviewOuterContainer']/div/div/div[2]"), "Total Records count", 20);
 
 //			recordCount = Integer.parseInt(totalRecordCount);
 			logger.info("Total record count from detail Report :: " + recordCount);

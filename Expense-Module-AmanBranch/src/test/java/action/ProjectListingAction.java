@@ -33,6 +33,15 @@ public class ProjectListingAction extends WebBasePage {
 		projectListingPage.clickNextButton();
 		projectListingPage.enterProjectName();
 	}
+	// Add project
+		public void addProjectForEditExpense() {
+			//projectListingPage.closeTourGuidePopup();
+			projectListingPage.clickAddProject();
+			//projectListingPage.closedefaultTemplateTourGuidePopup();
+			projectListingPage.selectDefaultTemplate();
+			projectListingPage.clickNextButton();
+			projectListingPage.enterProjectNameForEditExpense();
+		}
 
 	// Add Channel
 	public void addChannel() {
@@ -42,6 +51,14 @@ public class ProjectListingAction extends WebBasePage {
 		projectListingPage.enterChannelDescription();
 		projectListingPage.SaveButton();
 	}
+	// Add Channel
+		public void addChannelForEditExpense() {
+
+			projectListingPage.addChannel();
+			projectListingPage.enterChannelNameForEditExpense();
+			projectListingPage.enterChannelDescription();
+			projectListingPage.SaveButton();
+		}
 
 	// Select priority
 	public void selectPriority() {

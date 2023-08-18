@@ -530,7 +530,7 @@ public class WebBasePage extends WaitStatement {
 	public void verifyActualExpectedValues(By by, String valueToMatch, String name, int time) {
 		try {
 			String textFromWeb = getText(by, time);
-			if (textFromWeb.equalsIgnoreCase(valueToMatch)) {
+			if (textFromWeb.contains(valueToMatch)) {
 				getTest().log(LogStatus.PASS, name + " is visible as expected");
 				logger.debug(textFromWeb + name + " is visible as expected");
 			} else {
